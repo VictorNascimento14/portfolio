@@ -84,8 +84,8 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
             ))}
           </CarouselContent>
           <div className="flex justify-center mt-8">
-            <CarouselPrevious className="static translate-y-0 mr-4" />
-            <CarouselNext className="static translate-y-0" />
+            <CarouselPrevious className="static translate-y-0 mr-4 bg-gradient-to-r from-purple-500/80 to-pink-500/80 border-none text-white hover:from-purple-600 hover:to-pink-600" />
+            <CarouselNext className="static translate-y-0 bg-gradient-to-r from-purple-500/80 to-pink-500/80 border-none text-white hover:from-purple-600 hover:to-pink-600" />
           </div>
         </Carousel>
       </div>
