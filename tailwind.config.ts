@@ -100,13 +100,29 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					},
+				},
+				'typing': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink-caret': {
+					'from, to': { borderColor: 'transparent' },
+					'50%': { borderColor: 'white' }
+				},
+				'float': {
+					'0%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' },
+					'100%': { transform: 'translateY(0px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-				'fade-in-up': 'fade-in-up 0.5s ease-out'
+				'fade-in-up': 'fade-in-up 0.5s ease-out',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink-caret': 'blink-caret 0.75s step-end infinite',
+				'float': 'float 6s ease-in-out infinite'
 			}
 		}
 	},
