@@ -50,9 +50,9 @@ const Hero = ({ mousePosition }: HeroProps) => {
         </Button>
         <Button 
           variant="outline" 
-          className="border-purple-500 text-white hover:bg-purple-500/10 transform transition-transform duration-300 hover:scale-105"
+          className="border-purple-500 text-purple-500 hover:bg-purple-900/20 hover:text-purple-500 transform transition-transform duration-300 hover:scale-105"
           style={{
-            boxShadow: '0 0 15px rgba(138, 75, 255, 0.3)',
+            boxShadow: '0 0 15px rgb(147, 95, 243)',
             borderColor: '#9b87f5',
             borderWidth: '2px'
           }}
