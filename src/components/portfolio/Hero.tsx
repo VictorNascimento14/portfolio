@@ -50,10 +50,11 @@ const Hero = ({ mousePosition }: HeroProps) => {
         </Button>
         <Button 
           variant="outline" 
-          className="border-purple-500 text-white hover:bg-gray-800 transform transition-transform duration-300 hover:scale-105"
+          className="border-purple-500 text-white hover:bg-purple-500/10 transform transition-transform duration-300 hover:scale-105"
           style={{
-            boxShadow: '0 0 15px rgba(138, 75, 255, 0.2)',
-            borderColor: 'rgba(138, 75, 255, 0.3)'
+            boxShadow: '0 0 15px rgba(138, 75, 255, 0.3)',
+            borderColor: '#9b87f5',
+            borderWidth: '2px'
           }}
         >
           Entre em Contato
