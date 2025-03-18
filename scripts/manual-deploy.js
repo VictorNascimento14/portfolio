@@ -13,59 +13,80 @@ if (!fs.existsSync(path.join(process.cwd(), '.git'))) {
 }
 
 try {
+  // Certifique-se de estar na branch main
+  console.log('Verificando a branch atual...');
+  try {
+    const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+    if (currentBranch !== 'main') {
+      console.log(`Alterando da branch ${currentBranch} para main...`);
+      execSync('git checkout main');
+    }
+  } catch (e) {
+    console.error('Erro ao verificar ou mudar para a branch main:', e.message);
+    process.exit(1);
+  }
+
   console.log('Construindo o projeto...');
   execSync('npm run build', { stdio: 'inherit' });
   
-  console.log('Criando branch gh-pages se não existir...');
+  console.log('Criando ou atualizando branch gh-pages...');
   try {
-    execSync('git show-ref --verify --quiet refs/heads/gh-pages');
-    console.log('Branch gh-pages já existe.');
-  } catch (e) {
-    console.log('Criando nova branch gh-pages...');
-    execSync('git checkout --orphan gh-pages');
-    execSync('git reset --hard');
-    execSync('git commit --allow-empty -m "Iniciar branch gh-pages"');
-    execSync('git checkout main');
-  }
-  
-  console.log('Enviando conteúdo da pasta dist para branch gh-pages...');
-  execSync('git checkout gh-pages');
-  
-  // Limpar arquivos existentes (exceto .git)
-  const files = fs.readdirSync(process.cwd())
-    .filter(file => file !== '.git' && file !== 'node_modules');
-  
-  for (const file of files) {
-    if (fs.lstatSync(file).isDirectory()) {
-      fs.rmSync(file, { recursive: true, force: true });
-    } else {
-      fs.unlinkSync(file);
-    }
-  }
-  
-  // Copiar conteúdo da pasta dist
-  const distFiles = fs.readdirSync(path.join(process.cwd(), 'dist'));
-  for (const file of distFiles) {
-    const sourcePath = path.join(process.cwd(), 'dist', file);
-    const targetPath = path.join(process.cwd(), file);
+    // Verificar se a branch gh-pages existe
+    const branchExists = execSync('git branch -a').toString().includes('gh-pages');
     
-    if (fs.lstatSync(sourcePath).isDirectory()) {
-      fs.cpSync(sourcePath, targetPath, { recursive: true });
+    if (!branchExists) {
+      console.log('Criando nova branch gh-pages...');
+      execSync('git checkout --orphan gh-pages');
+      execSync('git rm -rf .', { stdio: 'ignore' });
     } else {
-      fs.copyFileSync(sourcePath, targetPath);
+      console.log('A branch gh-pages já existe, atualizando...');
+      execSync('git checkout gh-pages');
+      // Limpar tudo exceto .git
+      execSync('git rm -rf .', { stdio: 'ignore' });
     }
+  } catch (e) {
+    console.error('Erro ao manipular a branch gh-pages:', e.message);
+    execSync('git checkout main');
+    process.exit(1);
   }
+  
+  console.log('Copiando conteúdo da pasta dist para a branch gh-pages...');
+  // Copiar conteúdo da pasta dist para a raiz
+  fs.cpSync(path.join(process.cwd(), 'dist'), process.cwd(), { 
+    recursive: true, 
+    force: true 
+  });
+  
+  // Adicionar um arquivo .nojekyll para evitar processamento Jekyll
+  fs.writeFileSync(path.join(process.cwd(), '.nojekyll'), '');
   
   // Commit e push
+  console.log('Commitando e enviando alterações...');
   execSync('git add .');
-  execSync('git commit -m "Deploy to GitHub Pages"');
+  execSync('git commit -m "Deploy to GitHub Pages"', { stdio: 'ignore' });
   execSync('git push origin gh-pages --force');
   
   console.log('Voltando para a branch main...');
   execSync('git checkout main');
   
   console.log('🎉 Deploy concluído com sucesso!');
-  console.log('Seu site deverá estar disponível em breve em: https://seu-usuario.github.io/seu-repo/');
+  console.log('Seu site deverá estar disponível em breve em:');
+  
+  // Tenta determinar a URL do GitHub Pages
+  try {
+    const remoteUrl = execSync('git remote get-url origin').toString().trim();
+    const repoMatches = remoteUrl.match(/github\.com[:/]([^\/]+)\/([^\/\.]+)/);
+    
+    if (repoMatches) {
+      const [_, username, repo] = repoMatches;
+      console.log(`https://${username}.github.io/${repo.replace('.git', '')}/`);
+    } else {
+      console.log('https://seu-usuario.github.io/seu-repo/');
+    }
+  } catch (e) {
+    console.log('https://seu-usuario.github.io/seu-repo/');
+  }
+  
   console.log('Nota: Pode levar alguns minutos para que as alterações sejam visíveis.');
   
 } catch (error) {
