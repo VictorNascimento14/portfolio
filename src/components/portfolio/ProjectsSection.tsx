@@ -74,7 +74,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                           <ExternalLink className="mr-2 h-4 w-4" /> <a href="https://dragraziellagalvao1.netlify.app/" target="_blank">Ver Demo</a>
                         </Button>
                         <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500">
-                          <Github className="mr-2 h-4 w-4" /> Ver Código
+                          <Github className="mr-2 h-4 w-4" /> <a href="https://github.com/VictorNascimento14/projeto-fisio" target="_blank">Ver Código</a>
                         </Button>
                       </div>
                     </div>

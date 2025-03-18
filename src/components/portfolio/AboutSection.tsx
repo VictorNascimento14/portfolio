@@ -11,7 +11,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-purple-500/50 animate-float">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/foto.jpg" 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
@@ -55,7 +55,7 @@ const AboutSection = () => {
               </div>
             </div>
             <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-              Download CV
+              <a href="/Curriculo-Victor-Nascimento.pdf" download >Download CV</a>
             </Button>
           </div>
         </div>
