@@ -36,7 +36,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                         />
                       </div>
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                        <h3 className="text-xl font-bold mb-2 text-purple-800">{project.title}</h3>
                         <p className="text-gray-400 mb-4">{project.description}</p>
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag, tagIndex) => (
@@ -70,8 +70,8 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                         nunc est tincidunt.
                       </p>
                       <div className="flex justify-end gap-3">
-                        <Button variant="outline" size="sm" className="border-gray-700 text-white">
-                          <ExternalLink className="mr-2 h-4 w-4" /> Ver Demo
+                        <Button variant="outline" size="sm" className="border-gray-700 text-green-950">
+                          <ExternalLink className="mr-2 h-4 w-4" /> <a href="https://dragraziellagalvao1.netlify.app/" target="_blank">Ver Demo</a>
                         </Button>
                         <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500">
                           <Github className="mr-2 h-4 w-4" /> Ver Código

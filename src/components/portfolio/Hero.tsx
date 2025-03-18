@@ -9,14 +9,14 @@ interface HeroProps {
 
 const Hero = ({ mousePosition }: HeroProps) => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "Criando experiências digitais inovadoras e funcionais para seus usuários.";
+  const fullText = "Criando experiências digitais inovadoras e funcionais para os usuários.";
   const textRef = useRef(0);
   
   // Typing effect
   useEffect(() => {
     if (textRef.current < fullText.length) {
       const typingTimer = setTimeout(() => {
-        setTypedText(prevText => prevText + fullText.charAt(textRef.current));
+        setTypedText(fullText.slice(0, textRef.current + 1));
         textRef.current += 1;
       }, 50);
       
@@ -27,9 +27,9 @@ const Hero = ({ mousePosition }: HeroProps) => {
   return (
     <div className="container mx-auto px-4 relative z-1 text-center">
       <div className="mb-8 flex justify-center">
-        <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-purple-500 glow-effect animate-float">
+        <div className="relative w-60 h-50 rounded-full overflow-hidden border-2 border-purple-500 glow-effect animate-float">
           <img 
-            src="/placeholder.svg" 
+            src="/foto.jpg" 
             alt="Profile" 
             className="w-full h-full object-cover"
           />
@@ -37,7 +37,7 @@ const Hero = ({ mousePosition }: HeroProps) => {
       </div>
       
       <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 animate-fade-in-up">
-        Desenvolvedor Criativo
+        Victor Nascimento
       </h1>
       
       <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto h-16">

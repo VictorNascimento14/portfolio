@@ -20,7 +20,7 @@ export const projects: Project[] = [
     title: "Projeto 1",
     description: "Aplicação web desenvolvida com React e Node.js",
     tags: ["React", "Node.js", "Tailwind CSS"],
-    image: "/placeholder.svg"
+    image: "/port-1.jpeg"
   },
   {
     title: "Projeto 2",
