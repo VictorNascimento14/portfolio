@@ -26,12 +26,17 @@ const AboutSection = () => {
               </span>
             </h2>
             <p className="text-gray-300 mb-4">
-              Sou um desenvolvedor full-stack apaixonado por criar soluções digitais inovadoras. 
-              Com experiência em diversas tecnologias, busco constantemente aprender e aplicar 
-              novos conhecimentos para resolver problemas complexos.
+            Sou estudante de Engenharia de Software, apaixonado por tecnologia, inovação e resolução de problemas.
+            Tenho como principal característica a proatividade, sempre buscando novos desafios e aprendizados para evoluir pessoal e profissionalmente. <br />
+            <br />
+            Atualmente, estou focado em desenvolver minhas habilidades técnicas, com ênfase em boas práticas de programação, arquitetura de sistemas e criação de projetos que unam eficiência e qualidade.
+            
+            Acredito que a tecnologia é uma ferramenta poderosa para transformar ideias em soluções que impactam positivamente o mundo.
+
+Estou sempre disposto a colaborar, aprender e crescer — tanto individualmente quanto em equipe.
             </p>
             <p className="text-gray-300 mb-6">
-              Trabalho com React, Node.js, TypeScript, e outras tecnologias modernas para 
+              Trabalho com Java, Python, Javascript, e outras tecnologias modernas para 
               desenvolver aplicações web escaláveis e de alta performance.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -41,16 +46,16 @@ const AboutSection = () => {
                   <li>React / Next.js</li>
                   <li>TypeScript</li>
                   <li>Tailwind CSS</li>
-                  <li>SCSS</li>
+                  <li>Vite</li>
                 </ul>
               </div>
               <div>
                 <h4 className="text-purple-400 font-medium mb-2">Back-end</h4>
                 <ul className="text-gray-400 space-y-1">
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>PostgreSQL</li>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>Javascript</li>
+                  <li>Spring-Boot</li>
                 </ul>
               </div>
             </div>

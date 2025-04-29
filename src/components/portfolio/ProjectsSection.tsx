@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -65,16 +64,14 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                         className="w-full h-64 object-cover rounded-md mb-4"
                       />
                       <p className="text-gray-300 mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, 
-                        velit eu tincidunt lacinia, nunc est tincidunt nunc, vel lacinia nunc
-                        nunc est tincidunt.
+                        {project.description}
                       </p>
                       <div className="flex justify-end gap-3">
                         <Button variant="outline" size="sm" className="border-gray-700 text-green-950">
-                          <ExternalLink className="mr-2 h-4 w-4" /> <a href="https://dragraziellagalvao1.netlify.app/" target="_blank">Ver Demo</a>
+                          <ExternalLink className="mr-2 h-4 w-4" /> <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Ver Demo</a>
                         </Button>
                         <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500">
-                          <Github className="mr-2 h-4 w-4" /> <a href="https://github.com/VictorNascimento14/projeto-fisio" target="_blank">Ver Código</a>
+                          <Github className="mr-2 h-4 w-4" /> <a href={project.codeLink} target="_blank" rel="noopener noreferrer">Ver Código</a>
                         </Button>
                       </div>
                     </div>
