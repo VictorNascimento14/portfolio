@@ -1,69 +1,94 @@
-# Welcome to your Lovable project
+# 🌐 Portfolio – Victor Nascimento
 
-## Project info
+## 📄 Sobre este repositório
+Este repositório contém meu portfólio pessoal — uma página criada para apresentar quem eu sou, meus projetos, minhas habilidades e toda minha trajetória como desenvolvedor.  
+O objetivo é oferecer uma visão clara e direta do meu trabalho para recrutadores, empresas e outros desenvolvedores.
 
-**URL**: https://lovable.dev/projects/b6ec31a4-e141-4f74-ac8d-748ee4897d03
+---
 
-## How can I edit this code?
+## 👤 Sobre mim
+Sou **Victor José Nascimento da Silva**, desenvolvedor focado em **Back-End Java**, com experiência em **APIs REST, Spring Boot, Programação Orientada a Objetos, herança, polimorfismo e composição**.  
+Tenho paixão por criar soluções eficientes, bem estruturadas e aplicáveis ao mundo real.  
+No meu GitHub você encontra projetos práticos que refletem meu aprendizado contínuo e minha evolução no desenvolvimento de software.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Tecnologias Utilizadas no Portfólio
+- **HTML5**  
+- **CSS3**  
+- **JavaScript**  
+- **Git & GitHub**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b6ec31a4-e141-4f74-ac8d-748ee4897d03) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧩 Estrutura do Projeto
+/assets → imagens, ícones e mídias usadas no site
+/css → arquivos de estilo
+/js → scripts e funcionalidades da página
+index.html → página principal do portfólio
 
-**Use your preferred IDE**
+yaml
+Copiar código
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Como executar localmente
+Clone o repositório:
+```bash
+git clone https://github.com/VictorNascimento14/portfolio.git
+Entre na pasta:
 
-Follow these steps:
+bash
+Copiar código
+cd portfolio
+Execute abrindo o arquivo:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+bash
+Copiar código
+index.html
+(Não há dependências — é um projeto totalmente estático.)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🌎 Deploy
+🔗 Deploy ainda não configurado.
 
-# Step 3: Install the necessary dependencies.
-npm i
+✨ Funcionalidades do Portfólio
+Minha apresentação pessoal
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Projetos em Java, Spring Boot, POO, APIs e sistemas reais
 
-**Edit a file directly in GitHub**
+Links diretos para meus repositórios
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Botões de contato
 
-**Use GitHub Codespaces**
+Navegação simples e layout responsivo
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🔮 Melhorias Futuras
+Adicionar animações e microinterações
 
-## What technologies are used for this project?
+Criar uma versão usando React ou Next.js
 
-This project is built with .
+Incluir detalhes técnicos dos projetos
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Criar suporte multilíngue (PT/EN)
 
-## How can I deploy this project?
+📬 Contato
+Email: victor.dev.nascimento@gmail.com
 
-Simply open [Lovable](https://lovable.dev/projects/b6ec31a4-e141-4f74-ac8d-748ee4897d03) and click on Share -> Publish.
+LinkedIn: www.linkedin.com/in/--dev-victor-nascimento
 
-## I want to use a custom domain - is that possible?
+GitHub: https://github.com/VictorNascimento14
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Obrigado por visitar meu portfólio! 😊
+
+yaml
+Copiar código
+
+---
+
+Se quiser, posso gerar também uma versão **com imagens, badges, shields e ícones**, só pedir.
+
+
+
+
+
+
