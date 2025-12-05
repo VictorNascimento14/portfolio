@@ -80,12 +80,6 @@ GitHub: https://github.com/VictorNascimento14
 
 Obrigado por visitar meu portfólio! 😊
 
-yaml
-Copiar código
-
----
-
-Se quiser, posso gerar também uma versão **com imagens, badges, shields e ícones**, só pedir.
 
 
 
