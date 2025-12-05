@@ -22,19 +22,18 @@ No meu GitHub você encontra projetos práticos que refletem meu aprendizado con
 ---
 
 ## 🧩 Estrutura do Projeto
-/assets → imagens, ícones e mídias usadas no site
-/css → arquivos de estilo
-/js → scripts e funcionalidades da página
-index.html → página principal do portfólio
 
-yaml
-Copiar código
-
----
-
-## 🛠️ Como executar localmente
+```text
+/assets         → imagens, ícones e mídias usadas no site  
+/css            → arquivos de estilo  
+/js             → scripts e funcionalidades da página  
+index.html      → página principal do portfólio
+```
+🛠️ Como executar localmente
+```text
 Clone o repositório:
-```bash
+bash
+Copiar código
 git clone https://github.com/VictorNascimento14/portfolio.git
 Entre na pasta:
 
@@ -47,42 +46,35 @@ bash
 Copiar código
 index.html
 (Não há dependências — é um projeto totalmente estático.)
-
+```
 🌎 Deploy
 🔗 Deploy ainda não configurado.
 
 ✨ Funcionalidades do Portfólio
-Minha apresentação pessoal
+- Minha apresentação pessoal
 
-Projetos em Java, Spring Boot, POO, APIs e sistemas reais
+- Projetos em Java, Spring Boot, POO, APIs e sistemas reais
 
-Links diretos para meus repositórios
+- Links diretos para meus repositórios
 
-Botões de contato
+- Botões de contato
 
-Navegação simples e layout responsivo
+- Navegação simples e layout responsivo
 
 🔮 Melhorias Futuras
-Adicionar animações e microinterações
+- Adicionar animações e microinterações
 
-Criar uma versão usando React ou Next.js
+- Criar uma versão usando React ou Next.js
 
-Incluir detalhes técnicos dos projetos
+- Incluir detalhes técnicos dos projetos
 
-Criar suporte multilíngue (PT/EN)
+- Criar suporte multilíngue (PT/EN)
 
 📬 Contato
-Email: victor.dev.nascimento@gmail.com
+- Email: victor.dev.nascimento@gmail.com
 
-LinkedIn: www.linkedin.com/in/--dev-victor-nascimento
+- LinkedIn: www.linkedin.com/in/--dev-victor-nascimento
 
-GitHub: https://github.com/VictorNascimento14
+- GitHub: https://github.com/VictorNascimento14
 
 Obrigado por visitar meu portfólio! 😊
-
-
-
-
-
-
-
